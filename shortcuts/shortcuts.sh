@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# ADD SHORTCUTS ====================================================
+
 MEDIA_KEYS="org.gnome.settings-daemon.plugins.media-keys"
 
 # Reset all custom keybindings
@@ -31,7 +33,8 @@ add_shortcut() {
 
 # List of shortcuts to add (name, command, shortcut)
 shortcuts=(
-    "Flameshot" "flameshot gui" "<Shift><Super>S"
+    "Flameshot_1" "flameshot gui" "<Super><Shift>S"
+    "Flameshot_2" "flameshot gui" "<Super>J"
     # "Terminal" "gnome-terminal" "<Ctrl><Alt>T"
     # "Screenshot" "gnome-screenshot" "<Shift><Alt>S"
 )
@@ -45,3 +48,17 @@ for ((i=0; i<length; i+=3)); do
     KEYBINDING_ENTRY="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$((i/3))/"
     add_shortcut "$SHORTCUT_NAME" "$COMMAND" "$SHORTCUT" "$KEYBINDING_ENTRY"
 done
+
+# SETUP AUTOKEY ====================================================
+
+echo "Remove numpad keys bindings..."
+# Home
+xmodmap -e "keycode 180 = F13"
+# mail
+xmodmap -e "keycode 163 = F14"
+# calc
+xmodmap -e "keycode 148 = F15"
+
+echo "Setup Autokey..."
+rm -rf ~/.config/autokey
+cp -rf ./shortcuts/autokey ~/.config/
