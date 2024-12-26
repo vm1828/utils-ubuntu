@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo "Add system shortcuts --------------------------------------------------"
+echo ""
+echo "----------------------------------------------------- Add system shortcuts"
+echo ""
 
 MEDIA_KEYS="org.gnome.settings-daemon.plugins.media-keys"
 
@@ -41,15 +43,17 @@ shortcuts=(
 
 # Iterate through the list and add each shortcut
 length=${#shortcuts[@]}
-for ((i=0; i<length; i+=3)); do
+for ((i = 0; i < length; i += 3)); do
     SHORTCUT_NAME="${shortcuts[$i]}"
-    COMMAND="${shortcuts[$i+1]}"
-    SHORTCUT="${shortcuts[$i+2]}"
-    KEYBINDING_ENTRY="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$((i/3))/"
+    COMMAND="${shortcuts[$i + 1]}"
+    SHORTCUT="${shortcuts[$i + 2]}"
+    KEYBINDING_ENTRY="/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom$((i / 3))/"
     add_shortcut "$SHORTCUT_NAME" "$COMMAND" "$SHORTCUT" "$KEYBINDING_ENTRY"
 done
 
-echo "Setup Autokey ---------------------------------------------------------"
+echo ""
+echo "----------------------------------------------------- Setup Autokey"
+echo ""
 
 echo "Remove numpad keys bindings..."
 # Home
