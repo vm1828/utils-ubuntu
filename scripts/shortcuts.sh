@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ADD SHORTCUTS ====================================================
+echo "Add system shortcuts --------------------------------------------------"
 
 MEDIA_KEYS="org.gnome.settings-daemon.plugins.media-keys"
 
@@ -49,7 +49,7 @@ for ((i=0; i<length; i+=3)); do
     add_shortcut "$SHORTCUT_NAME" "$COMMAND" "$SHORTCUT" "$KEYBINDING_ENTRY"
 done
 
-# SETUP AUTOKEY ====================================================
+echo "Setup Autokey ---------------------------------------------------------"
 
 echo "Remove numpad keys bindings..."
 # Home
@@ -61,4 +61,4 @@ xmodmap -e "keycode 148 = F15"
 
 echo "Setup Autokey..."
 rm -rf ~/.config/autokey
-cp -rf ./shortcuts/autokey ~/.config/
+cp -rf ./scripts/autokey ~/.config/
