@@ -1,20 +1,18 @@
 #!/bin/bash
 
-echo ""
-echo "===================================================== INSTALL APPS"
-echo ""
+echo "" && echo "===================================================== APPS" && echo ""
 
 ./scripts/install.sh
 
-echo ""
-echo "===================================================== CONFIGURE SHORTCUTS"
-echo ""
+echo "" && echo "===================================================== LANGUAGES" && echo ""
+
+./scripts/languages.sh
+
+echo "" && echo "===================================================== SHORTCUTS" && echo ""
 
 ./scripts/shortcuts.sh
 
-echo ""
-echo "===================================================== ADD CRONJOBS"
-echo ""
+echo "" && echo "===================================================== CRONJOBS" && echo ""
 
 CRONJOBS="$HOME/crontab_files/cronjobs"
 mkdir -p "$HOME/crontab_files"
