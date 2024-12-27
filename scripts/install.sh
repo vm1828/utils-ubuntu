@@ -35,6 +35,7 @@ apps=(
     "VLC Player" "vlc" "sudo apt install vlc -y"
     "VS Code IDE" "code" "sudo apt install code -y"
     "Autokey" "autokey-gtk" "sudo apt install autokey-gtk -y && sudo apt install --fix-broken"
+    "Peek" "peek" "sudo apt install peek -y"
 
     # snap apps
     "Flameshot" "flameshot" "sudo snap install flameshot"
