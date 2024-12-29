@@ -55,13 +55,13 @@ echo ""
 echo "----------------------------------------------------- Setup Autokey"
 echo ""
 
-echo "Remove numpad keys bindings..."
-# Home
-xmodmap -e "keycode 180 = F13"
-# mail
-xmodmap -e "keycode 163 = F14"
-# calc
-xmodmap -e "keycode 148 = F15"
+# echo "Remove numpad keys bindings..."
+# # Home
+# xmodmap -e "keycode 180 = F13"
+# # mail
+# xmodmap -e "keycode 163 = F14"
+# # calc
+# xmodmap -e "keycode 148 = F15"
 
 echo "Setup Autokey..."
 rm -rf ~/.config/autokey
