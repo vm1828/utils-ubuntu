@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "5_CTRLZ",
+    "description": "9_CTRL_SHIFT_TAB",
     "store": {},
     "modes": [
         3
@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_up>"
+        "hotKey": "<np_left>"
     },
     "filter": {
         "regex": null,
