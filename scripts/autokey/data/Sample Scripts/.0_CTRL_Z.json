@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "7_ALT_TAB",
+    "description": "0_CTRL_Z",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 65,
+    "usageCount": 3,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_add>"
+        "hotKey": "<np_subtract>"
     },
     "filter": {
         "regex": null,

@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "1_SAVE",
+    "description": "0_CTRL_SHIFT_TAB",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 0,
+    "usageCount": 8,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<code180>"
+        "hotKey": "<np_left>"
     },
     "filter": {
         "regex": null,

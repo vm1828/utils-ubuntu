@@ -1,0 +1,28 @@
+{
+    "type": "script",
+    "description": "0_ALT_TAB",
+    "store": {},
+    "modes": [
+        3
+    ],
+    "usageCount": 68,
+    "prompt": false,
+    "omitTrigger": false,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [],
+        "backspace": true,
+        "ignoreCase": false,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[\\w]"
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": "<np_add>"
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    }
+}

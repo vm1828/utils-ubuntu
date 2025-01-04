@@ -1,11 +1,11 @@
 {
     "type": "script",
-    "description": "2_COPY",
+    "description": "0_CTRL_V",
     "store": {},
     "modes": [
         3
     ],
-    "usageCount": 0,
+    "usageCount": 2,
     "prompt": false,
     "omitTrigger": false,
     "showInTrayMenu": false,
@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<code163>"
+        "hotKey": "<np_divide>"
     },
     "filter": {
         "regex": null,
