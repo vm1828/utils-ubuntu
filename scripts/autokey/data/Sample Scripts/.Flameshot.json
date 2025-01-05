@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "Screepnshot",
+    "description": "Flameshot",
     "store": {},
     "modes": [
         3
@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_multiply>"
+        "hotKey": "<np_divide>"
     },
     "filter": {
         "regex": null,

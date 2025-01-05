@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<np_divide>"
+        "hotKey": "<np_multiply>"
     },
     "filter": {
         "regex": null,

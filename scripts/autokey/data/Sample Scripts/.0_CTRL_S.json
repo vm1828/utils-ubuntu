@@ -19,7 +19,7 @@
     },
     "hotkey": {
         "modifiers": [],
-        "hotKey": "<code180>"
+        "hotKey": "<np_home>"
     },
     "filter": {
         "regex": null,
