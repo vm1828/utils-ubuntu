@@ -1,2 +1,2 @@
 text = clipboard.get_selection()
-clipboard.fill_clipboard(text.upper())
+keyboard.send_keys(text.upper())

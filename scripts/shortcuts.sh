@@ -35,8 +35,8 @@ add_shortcut() {
 
 # List of shortcuts to add (name, command, shortcut)
 shortcuts=(
-    "Flameshot_1" "flameshot gui" "<Super><Shift>S"
-    "Flameshot_2" "flameshot gui" "<Super>J"
+    "Flameshot" "flameshot gui" "<Super><Shift>S"
+    # "Flameshot_2" "flameshot gui" "<Super>J"
     # "Terminal" "gnome-terminal" "<Ctrl><Alt>T"
     # "Screenshot" "gnome-screenshot" "<Shift><Alt>S"
 )

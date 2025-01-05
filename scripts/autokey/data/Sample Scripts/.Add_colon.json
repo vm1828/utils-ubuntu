@@ -1,6 +1,6 @@
 {
     "type": "script",
-    "description": "0_CTRL_S",
+    "description": "Add_colon",
     "store": {},
     "modes": [
         3

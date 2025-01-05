@@ -1,8 +1,8 @@
 # NUMPAD keys used in Autokey:
 
-| Command                  | Shortcut         | Original Key(s) | Code                  |
+| Command                  | Description      | Original Key(s) | Code                  |
 | ------------------------ | ---------------- | --------------- | --------------------- |
-| Flameshot                | Super+J          | /               | <np_divide>           |
+| Flameshot                | flameshot gui    | /               | <np_divide>           |
 | Copy/Paste               | Ctrl+C, Ctrl+V   | mail, *         | <code163>             |
 | Paste without formatting | Ctrl+Shift+V     | calc            | <code148>             |
 | Undo                     | Ctrl+Z           | -               | <np_subtract>         |
