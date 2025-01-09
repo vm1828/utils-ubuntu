@@ -1,8 +1,11 @@
 import re
 
 text = clipboard.get_selection()
-text = " ".join(text.split())  # remove extra spaces and new lines
 
-pattern = r'\b\d{1,2}:\d{2}\b'  # "4:54", "12:34", etc.
+# remove time patterns "4:54", "12:34", etc.
+pattern = r'\b\d{1,2}:\d{2}\b'
 text = re.sub(pattern, '', text).strip()
+# remove extra spaces and new lines
+text = " ".join(text.split())
+
 keyboard.send_keys(text+'\n')
