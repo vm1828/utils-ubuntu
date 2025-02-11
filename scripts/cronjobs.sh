@@ -4,7 +4,7 @@ CRONJOBS="$HOME/crontab_files/cronjobs"
 mkdir -p "$HOME/crontab_files"
 touch $CRONJOBS
 
-echo "0 0 * * * /sbin/shutdown -h now" >$CRONJOBS
+echo "0 23 * * * /sbin/shutdown -h now" >$CRONJOBS
 sudo crontab $CRONJOBS
 
 # check status of cron daemon: sudo systemctl status cron
