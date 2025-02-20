@@ -2,8 +2,9 @@
 
 # INSTALL APPS ##############################################################
 
-# sudo apt update
-# sudo apt upgrade
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install -f
 
 install_app() {
     local app_name="$1"
@@ -22,25 +23,36 @@ install_app() {
     fi
 }
 
+install_chrome() {
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    sudo rm -rf google-chrome-stable_current_amd64.deb
+}
+
+install_flameshot() {
+    sudo apt install flameshot -y
+    # https://github.com/flameshot-org/flameshot/issues/2560#issuecomment-1223943716
+    sudo sed -i 's/#WaylandEnable=false/WaylandEnable=false/g' /etc/gdm3/custom.conf
+} 
+
 # List of apps to install (app_name, package_name, command)
 apps=(
+    
     # dpkg apps
-    "Google Chrome" "google-chrome"
-    "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && sudo dpkg -i google-chrome-stable_current_amd64.deb && sudo rm -rf google-chrome-stable_current_amd64.deb"
+    "Google Chrome" "google-chrome" "install_chrome"
 
     # apt apps
     "Git" "git" "sudo apt install git -y"
     "GNOME Control Center" "gnome-control-center" "sudo apt install gnome-control-center -y"
     "LibreOffice" "libreoffice" "sudo apt install libreoffice -y"
     "VLC Player" "vlc" "sudo apt install vlc -y"
-    "VS Code IDE" "code" "sudo apt install code -y"
-    "Autokey" "autokey-gtk" "sudo apt install autokey-gtk -y && sudo apt install --fix-broken"
+    "Autokey" "autokey-gtk" "sudo apt install autokey-gtk -y"
     "Peek" "peek" "sudo apt install peek -y"
+    "Flameshot" "flameshot" "install_flameshot"
 
     # snap apps
-    "Flameshot" "flameshot" "sudo snap install flameshot"
     "Postman" "postman" "sudo snap install postman"
-
+    "VS Code IDE" "code" "sudo snap install code --classic"
 )
 
 # Iterate through the list and add each shortcut
@@ -58,3 +70,5 @@ done
 
 favorites="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'code.desktop', 'com.uploadedlobster.peek.desktop', 'gnome-control-center.desktop', 'autokey-gtk.desktop']"
 dconf write /org/gnome/shell/favorite-apps "$favorites"
+
+
