@@ -33,11 +33,11 @@ install_flameshot() {
     sudo apt install flameshot -y
     # https://github.com/flameshot-org/flameshot/issues/2560#issuecomment-1223943716
     sudo sed -i 's/#WaylandEnable=false/WaylandEnable=false/g' /etc/gdm3/custom.conf
-} 
+}
 
 # List of apps to install (app_name, package_name, command)
 apps=(
-    
+
     # dpkg apps
     "Google Chrome" "google-chrome" "install_chrome"
 
@@ -68,7 +68,5 @@ done
 
 # to see favorite apps `dconf read /org/gnome/shell/favorite-apps`
 
-favorites="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'code.desktop', 'com.uploadedlobster.peek.desktop', 'gnome-control-center.desktop', 'autokey-gtk.desktop']"
+favorites="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'code.desktop', 'code_code.desktop', 'com.uploadedlobster.peek.desktop', 'gnome-control-center.desktop', 'autokey-gtk.desktop']"
 dconf write /org/gnome/shell/favorite-apps "$favorites"
-
-
