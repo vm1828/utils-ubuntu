@@ -6,6 +6,8 @@ text = clipboard.get_selection()
 pattern = r'\b\d{1,2}:\d{2}\b'
 text = re.sub(pattern, '', text).strip()
 # remove extra spaces and new lines
-text = " ".join(text.split())
+splitted = text.split()
+splitted[0] = splitted[0].capitalize()
+text = " ".join(splitted)
 
 keyboard.send_keys(text+'\n')
