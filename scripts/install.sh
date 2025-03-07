@@ -48,6 +48,8 @@ apps=(
     "VLC Player" "vlc" "sudo apt install vlc -y"
     "Autokey" "autokey-gtk" "sudo apt install autokey-gtk -y"
     "Peek" "peek" "sudo apt install peek -y"
+    "Net Tools" "ifconfig" "sudo apt install net-tools -y"
+    "Barrier" "barrier" "sudo apt install barrier -y"
     "Flameshot" "flameshot" "install_flameshot"
 
     # snap apps
@@ -68,5 +70,5 @@ done
 
 # to see favorite apps `dconf read /org/gnome/shell/favorite-apps`
 
-favorites="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'code.desktop', 'code_code.desktop', 'com.uploadedlobster.peek.desktop', 'gnome-control-center.desktop', 'autokey-gtk.desktop']"
+favorites="['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'code.desktop', 'code_code.desktop', 'com.uploadedlobster.peek.desktop', 'gnome-control-center.desktop', 'autokey-gtk.desktop', 'barrier.desktop']"
 dconf write /org/gnome/shell/favorite-apps "$favorites"
