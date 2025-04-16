@@ -29,6 +29,13 @@ install_chrome() {
     sudo rm -rf google-chrome-stable_current_amd64.deb
 }
 
+install_vscode() {
+    wget -O vscode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+    sudo dpkg -i vscode.deb
+    sudo apt-get install -f
+    sudo rm vscode.deb
+}
+
 install_flameshot() {
     sudo apt install flameshot -y
     # https://github.com/flameshot-org/flameshot/issues/2560#issuecomment-1223943716
@@ -49,10 +56,10 @@ apps=(
     "Autokey" "autokey-gtk" "sudo apt install autokey-gtk -y"
     "Peek" "peek" "sudo apt install peek -y"
     "Flameshot" "flameshot" "install_flameshot"
+    "VSCode IDE" "code" "install_vscode"
 
     # snap apps
     "Postman" "postman" "sudo snap install postman"
-    "VS Code IDE" "code" "sudo snap install code --classic"
 )
 
 # Iterate through the list and add each shortcut
